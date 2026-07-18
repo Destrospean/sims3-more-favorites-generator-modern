@@ -1,0 +1,697 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/MoreFavorites_Generator/MoreFavorites_Generator.csproj": {}
+  },
+  "projects": {
+    "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/MoreFavorites_Generator/MoreFavorites_Generator.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/MoreFavorites_Generator/MoreFavorites_Generator.csproj",
+        "projectName": "MoreFavorites_Generator",
+        "projectPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/MoreFavorites_Generator/MoreFavorites_Generator.csproj",
+        "packagesPath": "/home/andrew/.nuget/packages/",
+        "outputPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/MoreFavorites_Generator/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/andrew/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/CS System Classes/CS System Classes.csproj": {
+                "projectPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/CS System Classes/CS System Classes.csproj"
+              },
+              "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Interfaces/Interfaces.csproj": {
+                "projectPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Interfaces/Interfaces.csproj"
+              },
+              "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Package/Package.csproj": {
+                "projectPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Package/Package.csproj"
+              },
+              "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Settings/Settings.csproj": {
+                "projectPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Settings/Settings.csproj"
+              },
+              "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Wrappers/NameMapResource/NameMapResource.csproj": {
+                "projectPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Wrappers/NameMapResource/NameMapResource.csproj"
+              },
+              "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Wrappers/ScriptResource/ScriptResource.csproj": {
+                "projectPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Wrappers/ScriptResource/ScriptResource.csproj"
+              },
+              "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Wrappers/StblResource/StblResource.csproj": {
+                "projectPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Wrappers/StblResource/StblResource.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.NET.ILLink.Tasks": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.28, )",
+              "autoReferenced": true
+            },
+            "Mono.Cecil": {
+              "target": "Package",
+              "version": "[0.11.6, )"
+            },
+            "SixLabors.ImageSharp": {
+              "target": "Package",
+              "version": "[3.1.12, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
+              "version": "[8.0.28, 8.0.28]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[8.0.28, 8.0.28]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.linux-x64",
+              "version": "[8.0.28, 8.0.28]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.128/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
+        }
+      }
+    },
+    "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/CS System Classes/CS System Classes.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/CS System Classes/CS System Classes.csproj",
+        "projectName": "System.Custom",
+        "projectPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/CS System Classes/CS System Classes.csproj",
+        "packagesPath": "/home/andrew/.nuget/packages/",
+        "outputPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/CS System Classes/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/andrew/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.NET.ILLink.Tasks": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.28, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
+              "version": "[8.0.28, 8.0.28]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.linux-x64",
+              "version": "[8.0.28, 8.0.28]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.128/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
+        }
+      }
+    },
+    "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Interfaces/Interfaces.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Interfaces/Interfaces.csproj",
+        "projectName": "s3pi.Interfaces",
+        "projectPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Interfaces/Interfaces.csproj",
+        "packagesPath": "/home/andrew/.nuget/packages/",
+        "outputPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Interfaces/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/andrew/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/CS System Classes/CS System Classes.csproj": {
+                "projectPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/CS System Classes/CS System Classes.csproj"
+              },
+              "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Settings/Settings.csproj": {
+                "projectPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Settings/Settings.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.NET.ILLink.Tasks": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.28, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
+              "version": "[8.0.28, 8.0.28]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.linux-x64",
+              "version": "[8.0.28, 8.0.28]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.128/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
+        }
+      }
+    },
+    "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Package/Package.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Package/Package.csproj",
+        "projectName": "s3pi.Package",
+        "projectPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Package/Package.csproj",
+        "packagesPath": "/home/andrew/.nuget/packages/",
+        "outputPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Package/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/andrew/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/CS System Classes/CS System Classes.csproj": {
+                "projectPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/CS System Classes/CS System Classes.csproj"
+              },
+              "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Interfaces/Interfaces.csproj": {
+                "projectPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Interfaces/Interfaces.csproj"
+              },
+              "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Settings/Settings.csproj": {
+                "projectPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Settings/Settings.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.NET.ILLink.Tasks": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.28, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
+              "version": "[8.0.28, 8.0.28]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.linux-x64",
+              "version": "[8.0.28, 8.0.28]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.128/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
+        }
+      }
+    },
+    "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Settings/Settings.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Settings/Settings.csproj",
+        "projectName": "s3pi.Settings",
+        "projectPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Settings/Settings.csproj",
+        "packagesPath": "/home/andrew/.nuget/packages/",
+        "outputPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Settings/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/andrew/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.NET.ILLink.Tasks": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.28, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
+              "version": "[8.0.28, 8.0.28]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.linux-x64",
+              "version": "[8.0.28, 8.0.28]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.128/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
+        }
+      }
+    },
+    "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Wrappers/NameMapResource/NameMapResource.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Wrappers/NameMapResource/NameMapResource.csproj",
+        "projectName": "s3pi.NameMapResource",
+        "projectPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Wrappers/NameMapResource/NameMapResource.csproj",
+        "packagesPath": "/home/andrew/.nuget/packages/",
+        "outputPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Wrappers/NameMapResource/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/andrew/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/CS System Classes/CS System Classes.csproj": {
+                "projectPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/CS System Classes/CS System Classes.csproj"
+              },
+              "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Interfaces/Interfaces.csproj": {
+                "projectPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Interfaces/Interfaces.csproj"
+              },
+              "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Settings/Settings.csproj": {
+                "projectPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Settings/Settings.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.NET.ILLink.Tasks": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.28, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
+              "version": "[8.0.28, 8.0.28]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.linux-x64",
+              "version": "[8.0.28, 8.0.28]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.128/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
+        }
+      }
+    },
+    "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Wrappers/ScriptResource/ScriptResource.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Wrappers/ScriptResource/ScriptResource.csproj",
+        "projectName": "s3pi.ScriptResource",
+        "projectPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Wrappers/ScriptResource/ScriptResource.csproj",
+        "packagesPath": "/home/andrew/.nuget/packages/",
+        "outputPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Wrappers/ScriptResource/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/andrew/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/CS System Classes/CS System Classes.csproj": {
+                "projectPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/CS System Classes/CS System Classes.csproj"
+              },
+              "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Interfaces/Interfaces.csproj": {
+                "projectPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Interfaces/Interfaces.csproj"
+              },
+              "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Settings/Settings.csproj": {
+                "projectPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Settings/Settings.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.NET.ILLink.Tasks": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.28, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
+              "version": "[8.0.28, 8.0.28]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.linux-x64",
+              "version": "[8.0.28, 8.0.28]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.128/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
+        }
+      }
+    },
+    "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Wrappers/StblResource/StblResource.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Wrappers/StblResource/StblResource.csproj",
+        "projectName": "s3pi.StblResource",
+        "projectPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Wrappers/StblResource/StblResource.csproj",
+        "packagesPath": "/home/andrew/.nuget/packages/",
+        "outputPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Wrappers/StblResource/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/andrew/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/CS System Classes/CS System Classes.csproj": {
+                "projectPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/CS System Classes/CS System Classes.csproj"
+              },
+              "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Interfaces/Interfaces.csproj": {
+                "projectPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Interfaces/Interfaces.csproj"
+              },
+              "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Settings/Settings.csproj": {
+                "projectPath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/s3pi-modern/Settings/Settings.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.NET.ILLink.Tasks": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.28, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
+              "version": "[8.0.28, 8.0.28]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.linux-x64",
+              "version": "[8.0.28, 8.0.28]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.128/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "BpRzKxIvBTTncOfQaGGdN5WWLcVXqzg1ApQHXrN6wTY+2JUvfkbjwA2QRBoej9zYrLXAyOl24IOPUBzPA7v+8w==",
+  "success": true,
+  "projectFilePath": "/home/andrew/Projects/The Sims 3 Projects/Source Code/MoreFavorites_Generator/MoreFavorites_Generator/MoreFavorites_Generator.csproj",
+  "expectedPackageFiles": [
+    "/home/andrew/.nuget/packages/microsoft.net.illink.tasks/8.0.28/microsoft.net.illink.tasks.8.0.28.nupkg.sha512",
+    "/home/andrew/.nuget/packages/mono.cecil/0.11.6/mono.cecil.0.11.6.nupkg.sha512",
+    "/home/andrew/.nuget/packages/sixlabors.imagesharp/3.1.12/sixlabors.imagesharp.3.1.12.nupkg.sha512",
+    "/home/andrew/.nuget/packages/microsoft.netcore.app.runtime.linux-x64/8.0.28/microsoft.netcore.app.runtime.linux-x64.8.0.28.nupkg.sha512",
+    "/home/andrew/.nuget/packages/microsoft.aspnetcore.app.runtime.linux-x64/8.0.28/microsoft.aspnetcore.app.runtime.linux-x64.8.0.28.nupkg.sha512",
+    "/home/andrew/.nuget/packages/microsoft.netcore.app.host.linux-x64/8.0.28/microsoft.netcore.app.host.linux-x64.8.0.28.nupkg.sha512"
+  ],
+  "logs": []
+}

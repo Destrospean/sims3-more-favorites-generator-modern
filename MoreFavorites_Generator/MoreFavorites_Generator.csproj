@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+        <RootNamespace>Destrospean.MoreFavorites.Generator</RootNamespace>
+        <AssemblyName>MoreFavorites_Generator</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Mono.Cecil" Version="0.11.6" />
+        <PackageReference Include="SixLabors.ImageSharp" Version="3.1.12" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include="Template.xml">
+            <LogicalName>Template.xml</LogicalName>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Icons\cas_favorites_color_i_white_r2.png">
+            <LogicalName>cas_favorites_color_i_white_r2.png</LogicalName>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Icons\cas_favorites_color_i_white_s_r2.png">
+            <LogicalName>cas_favorites_color_i_white_s_r2.png</LogicalName>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Icons\cas_favorites_food_i_hamburger_r2.png">
+            <LogicalName>cas_favorites_food_i_hamburger_r2.png</LogicalName>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Icons\cas_favorites_food_i_hamburger_s_r2.png">
+            <LogicalName>cas_favorites_food_i_hamburger_s_r2.png</LogicalName>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Icons\cas_favorites_music_i_electronica_r2.png">
+            <LogicalName>cas_favorites_music_i_electronica_r2.png</LogicalName>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Icons\cas_favorites_music_i_electronica_s_r2.png">
+            <LogicalName>cas_favorites_music_i_electronica_s_r2.png</LogicalName>
+        </EmbeddedResource>
+        <EmbeddedResource Include="MoreFavorites_Base.dll">
+            <LogicalName>MoreFavorites_Base.dll</LogicalName>
+        </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\s3pi-modern\CS System Classes\CS System Classes.csproj" />
+        <ProjectReference Include="..\s3pi-modern\Interfaces\Interfaces.csproj" />
+        <ProjectReference Include="..\s3pi-modern\Package\Package.csproj" />
+        <ProjectReference Include="..\s3pi-modern\Settings\Settings.csproj" />
+        <ProjectReference Include="..\s3pi-modern\Wrappers\NameMapResource\NameMapResource.csproj" />
+        <ProjectReference Include="..\s3pi-modern\Wrappers\ScriptResource\ScriptResource.csproj" />
+        <ProjectReference Include="..\s3pi-modern\Wrappers\StblResource\StblResource.csproj" />
+    </ItemGroup>
+
+</Project>

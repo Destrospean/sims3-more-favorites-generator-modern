@@ -1,0 +1,3 @@
+[submodule "s3pi-modern"]
+	path = s3pi-modern
+	url = https://github.com/Destrospean/s3pi-modern
