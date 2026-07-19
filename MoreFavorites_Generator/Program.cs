@@ -223,7 +223,7 @@ namespace Destrospean.MoreFavorites.Generator
                 Stream largeIMAGStream = new MemoryStream(),
                     smallIMAGStream = new MemoryStream();
                 largeFoodIMAG.Encode(largeIMAGStream, SKEncodedImageFormat.Png, 100);
-                smallFoodIMAG.Encode(largeIMAGStream, SKEncodedImageFormat.Png, 100);
+                smallFoodIMAG.Encode(smallIMAGStream, SKEncodedImageFormat.Png, 100);
                 package.AddResource(new ResourceKey(0x2F7D0004, 0, largeIMAGKeyInstance), largeIMAGStream, true);
                 package.AddResource(new ResourceKey(0x2F7D0004, 0, smallIMAGKeyInstance), smallIMAGStream, true);
                 nameMapResource.Add(largeIMAGKeyInstance, largeIMAGKey);
@@ -239,7 +239,7 @@ namespace Destrospean.MoreFavorites.Generator
                 Stream largeIMAGStream = new MemoryStream(),
                     smallIMAGStream = new MemoryStream();
                 largeMusicIMAG.Encode(largeIMAGStream, SKEncodedImageFormat.Png, 100);
-                smallMusicIMAG.Encode(largeIMAGStream, SKEncodedImageFormat.Png, 100);
+                smallMusicIMAG.Encode(smallIMAGStream, SKEncodedImageFormat.Png, 100);
                 package.AddResource(new ResourceKey(0x2F7D0004, 0, largeIMAGKeyInstance), largeIMAGStream, true);
                 package.AddResource(new ResourceKey(0x2F7D0004, 0, smallIMAGKeyInstance), smallIMAGStream, true);
                 nameMapResource.Add(largeIMAGKeyInstance, largeIMAGKey);
