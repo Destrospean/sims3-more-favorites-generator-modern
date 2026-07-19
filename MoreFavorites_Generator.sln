@@ -66,4 +66,8 @@ Global
 		{F8D9736C-E0EC-4919-B5B7-C030A39EF014} = {7EACFE95-1FD8-44EA-BD63-C0F71B31583E}
 		{093921AB-A9A4-4BD9-8B8F-786B9D107C23} = {7EACFE95-1FD8-44EA-BD63-C0F71B31583E}
 	EndGlobalSection
+	GlobalSection(RiderSharedRunConfigurations) = postSolution
+		File = .bundleLinux\Distribute for Linux.run.xml
+		File = .bundleWindows\Distribute for Windows.run.xml
+	EndGlobalSection
 EndGlobal
