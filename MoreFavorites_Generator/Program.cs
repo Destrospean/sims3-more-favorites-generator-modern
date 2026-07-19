@@ -56,7 +56,7 @@ namespace Destrospean.MoreFavorites.Generator
             var executable = System.Reflection.Assembly.GetExecutingAssembly();
 
             // Create a new package to clone to
-            var newPackage = s3pi.Package.Package.NewPackage(0);
+            var package = s3pi.Package.Package.NewPackage(0);
 
             // Get the XML
             var xmlDocument = new XmlDocument();
@@ -190,7 +190,7 @@ namespace Destrospean.MoreFavorites.Generator
                     stblResources[i].Add(FNV64.GetHash("Gameplay/Objects/Plumbing/SonicShower:" + colorName), (string?)favoriteColorElement.GetAttribute("Display_Name") ?? "Gameplay/Objects/Plumbing/SonicShower:" + colorName);
                     stblResources[i].Add(FNV64.GetHash("Ui/Caption/CAS/Favorites/Color:" + colorName), (string?)favoriteColorElement.GetAttribute("Display_Name") ?? "Ui/Caption/CAS/Favorites/Color:" + colorName);
                 }
-                newPackage.AddResource(new ResourceKey(0x220557DA, 0, stblKeyInstance), stblResources[i].Stream, true);
+                package.AddResource(new ResourceKey(0x220557DA, 0, stblKeyInstance), stblResources[i].Stream, true);
                 nameMapResource.Add(stblKeyInstance, stblName);
             }
             foreach (var favoriteColorElement in favoriteColorElements)
@@ -208,8 +208,8 @@ namespace Destrospean.MoreFavorites.Generator
                     smallIMAGStream = new MemoryStream();
                 Colorize(largeColorIMAG, argb | 0xFF000000).Encode(largeIMAGStream, SKEncodedImageFormat.Png, 100);
                 Colorize(smallColorIMAG, argb | 0xFF000000).Encode(smallIMAGStream, SKEncodedImageFormat.Png, 100);
-                newPackage.AddResource(new ResourceKey(0x2F7D0004, 0, largeIMAGKeyInstance), largeIMAGStream, true);
-                newPackage.AddResource(new ResourceKey(0x2F7D0004, 0, smallIMAGKeyInstance), smallIMAGStream, true);
+                package.AddResource(new ResourceKey(0x2F7D0004, 0, largeIMAGKeyInstance), largeIMAGStream, true);
+                package.AddResource(new ResourceKey(0x2F7D0004, 0, smallIMAGKeyInstance), smallIMAGStream, true);
                 nameMapResource.Add(largeIMAGKeyInstance, imageKeyInstanceBase + "_r2");
                 nameMapResource.Add(smallIMAGKeyInstance, imageKeyInstanceBase + "_s_r2");
             }
@@ -224,8 +224,8 @@ namespace Destrospean.MoreFavorites.Generator
                     smallIMAGStream = new MemoryStream();
                 largeFoodIMAG.Encode(largeIMAGStream, SKEncodedImageFormat.Png, 100);
                 smallFoodIMAG.Encode(largeIMAGStream, SKEncodedImageFormat.Png, 100);
-                newPackage.AddResource(new ResourceKey(0x2F7D0004, 0, largeIMAGKeyInstance), largeIMAGStream, true);
-                newPackage.AddResource(new ResourceKey(0x2F7D0004, 0, smallIMAGKeyInstance), smallIMAGStream, true);
+                package.AddResource(new ResourceKey(0x2F7D0004, 0, largeIMAGKeyInstance), largeIMAGStream, true);
+                package.AddResource(new ResourceKey(0x2F7D0004, 0, smallIMAGKeyInstance), smallIMAGStream, true);
                 nameMapResource.Add(largeIMAGKeyInstance, largeIMAGKey);
                 nameMapResource.Add(smallIMAGKeyInstance, smallIMAGKey);
             }
@@ -240,21 +240,21 @@ namespace Destrospean.MoreFavorites.Generator
                     smallIMAGStream = new MemoryStream();
                 largeMusicIMAG.Encode(largeIMAGStream, SKEncodedImageFormat.Png, 100);
                 smallMusicIMAG.Encode(largeIMAGStream, SKEncodedImageFormat.Png, 100);
-                newPackage.AddResource(new ResourceKey(0x2F7D0004, 0, largeIMAGKeyInstance), largeIMAGStream, true);
-                newPackage.AddResource(new ResourceKey(0x2F7D0004, 0, smallIMAGKeyInstance), smallIMAGStream, true);
+                package.AddResource(new ResourceKey(0x2F7D0004, 0, largeIMAGKeyInstance), largeIMAGStream, true);
+                package.AddResource(new ResourceKey(0x2F7D0004, 0, smallIMAGKeyInstance), smallIMAGStream, true);
                 nameMapResource.Add(largeIMAGKeyInstance, largeIMAGKey);
                 nameMapResource.Add(smallIMAGKeyInstance, smallIMAGKey);
             }
             nameMapResource.Add(s3saKeyInstance, assemblyName);
-            newPackage.AddResource(new ResourceKey(0x166038C, 0, 0), nameMapResource.Stream, true);
-            newPackage.AddResource(new ResourceKey(0x333406C, 0, s3saKeyInstance), xmlStream, true);
-            newPackage.AddResource(new ResourceKey(0x73FAA07, 0, s3saKeyInstance), new ScriptResource.ScriptResource(0, null)
+            package.AddResource(new ResourceKey(0x166038C, 0, 0), nameMapResource.Stream, true);
+            package.AddResource(new ResourceKey(0x333406C, 0, s3saKeyInstance), xmlStream, true);
+            package.AddResource(new ResourceKey(0x73FAA07, 0, s3saKeyInstance), new ScriptResource.ScriptResource(0, null)
                 {
                     Assembly = new BinaryReader(assemblyStream)
                 }.Stream, true);
 
             // Save the new package with the new name
-            newPackage.SaveAs(AppDomain.CurrentDomain.BaseDirectory + assemblyName + ".package");
+            package.SaveAs(AppDomain.CurrentDomain.BaseDirectory + assemblyName + ".package");
         }
     }
 }
