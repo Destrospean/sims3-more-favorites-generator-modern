@@ -195,12 +195,12 @@ namespace Destrospean.MoreFavorites.Generator
             }
             foreach (var favoriteColorElement in favoriteColorElements)
             {
-                string hex = favoriteColorElement.GetAttribute("Hex"),
+                string? hex = (string?)favoriteColorElement.GetAttribute("Hex"),
                     imageKeyInstanceBase = "cas_favorites_color_i_" + favoriteColorElement.GetAttribute("Name");
                 ulong largeIMAGKeyInstance = FNV64.GetHash(imageKeyInstanceBase + "_r2"),
                     smallIMAGKeyInstance = FNV64.GetHash(imageKeyInstanceBase + "_s_r2");
                 int startIndex;
-                if (string.IsNullOrEmpty(hex) || !uint.TryParse( string.Concat("FFFFFFFF".Remove(0, hex.Length - (startIndex = hex.StartsWith('#') ? 1 : hex.StartsWith("0x") ? 2 : 0)), hex.AsSpan(startIndex)), System.Globalization.NumberStyles.HexNumber, System.Globalization.CultureInfo.InvariantCulture, out var argb))
+                if (hex == null || !uint.TryParse( string.Concat("FFFFFFFF".Remove(0, hex.Length - (startIndex = hex.StartsWith('#') ? 1 : hex.StartsWith("0x") ? 2 : 0)), hex.AsSpan(startIndex)), System.Globalization.NumberStyles.HexNumber, System.Globalization.CultureInfo.InvariantCulture, out var argb))
                 {
                     continue;
                 }
