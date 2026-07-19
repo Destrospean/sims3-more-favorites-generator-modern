@@ -1,10 +1,7 @@
 ﻿using System.Security.Cryptography;
 using System.Xml;
 using Mono.Cecil;
-using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.Formats.Png;
-using SixLabors.ImageSharp.PixelFormats;
-using SixLabors.ImageSharp.Processing;
+using SkiaSharp;
 
 namespace Destrospean.MoreFavorites.Generator
 {
@@ -37,11 +34,18 @@ namespace Destrospean.MoreFavorites.Generator
             THA_TH
         }
 
-        public static Image Colorize(Image source, Color color)
+        public static SKBitmap Colorize(SKBitmap source, SKColor color)
         {
-            var pixel = color.ToPixel<Rgba32>();
-            var result = source.CloneAs<Rgba32>();
-            result.Mutate(x => x.Filter(new ColorMatrix((float)pixel.R / byte.MaxValue, 0, 0, 0, 0, (float)pixel.G / byte.MaxValue, 0, 0, 0, 0, (float)pixel.B / byte.MaxValue, 0, 0, 0, 0, 1, 0, 0, 0, 0)));
+            var result = new SKBitmap(source.Width, source.Height);
+            using var canvas = new SKCanvas(result);
+            using var paint = new SKPaint();
+            paint.ColorFilter = SKColorFilter.CreateColorMatrix([
+                (float)color.Red / byte.MaxValue, 0, 0, 0, 0,
+                0, (float)color.Green / byte.MaxValue, 0, 0, 0,
+                0, 0, (float)color.Blue / byte.MaxValue, 0, 0,
+                0, 0, 0, 1, 0
+            ]);
+            canvas.DrawBitmap(source, new SKRect(0, 0, source.Width, source.Height), new SKSamplingOptions(), paint);
             return result;
         }
 
@@ -79,12 +83,12 @@ namespace Destrospean.MoreFavorites.Generator
             var assembly = AssemblyDefinition.ReadAssembly(executable.GetManifestResourceStream("MoreFavorites_Base.dll"));
 
             // Get the icons for the white color
-            Image largeColorIMAG = Image.Load(executable.GetManifestResourceStream("cas_favorites_color_i_white_r2.png")!),
-                largeFoodIMAG = Image.Load(executable.GetManifestResourceStream("cas_favorites_food_i_hamburger_r2.png")!),
-                largeMusicIMAG = Image.Load(executable.GetManifestResourceStream("cas_favorites_music_i_electronica_r2.png")!),
-                smallColorIMAG = Image.Load(executable.GetManifestResourceStream("cas_favorites_color_i_white_s_r2.png")!),
-                smallFoodIMAG = Image.Load(executable.GetManifestResourceStream("cas_favorites_food_i_hamburger_s_r2.png")!),
-                smallMusicIMAG = Image.Load(executable.GetManifestResourceStream("cas_favorites_music_i_electronica_s_r2.png")!);
+            SKBitmap largeColorIMAG = SKBitmap.Decode(executable.GetManifestResourceStream("cas_favorites_color_i_white_r2.png")!),
+                largeFoodIMAG = SKBitmap.Decode(executable.GetManifestResourceStream("cas_favorites_food_i_hamburger_r2.png")!),
+                largeMusicIMAG = SKBitmap.Decode(executable.GetManifestResourceStream("cas_favorites_music_i_electronica_r2.png")!),
+                smallColorIMAG = SKBitmap.Decode(executable.GetManifestResourceStream("cas_favorites_color_i_white_s_r2.png")!),
+                smallFoodIMAG = SKBitmap.Decode(executable.GetManifestResourceStream("cas_favorites_food_i_hamburger_s_r2.png")!),
+                smallMusicIMAG = SKBitmap.Decode(executable.GetManifestResourceStream("cas_favorites_music_i_electronica_s_r2.png")!);
 
             // Copy the elements from the XML to put into the new package
             var rootNode = xmlDocument.SelectSingleNode("Favorites") ?? xmlDocument.SelectSingleNode("Favourites");
@@ -178,8 +182,8 @@ namespace Destrospean.MoreFavorites.Generator
                 }
                 Stream largeIMAGStream = new MemoryStream(),
                     smallIMAGStream = new MemoryStream();
-                Colorize(largeColorIMAG, Color.ParseHex((argb << 8 | 0xFF).ToString("X8"))).Save(largeIMAGStream, new PngEncoder());
-                Colorize(smallColorIMAG, Color.ParseHex((argb << 8 | 0xFF).ToString("X8"))).Save(smallIMAGStream, new PngEncoder());
+                Colorize(largeColorIMAG, argb | 0xFF000000).Encode(largeIMAGStream, SKEncodedImageFormat.Png, 100);
+                Colorize(smallColorIMAG, argb | 0xFF000000).Encode(smallIMAGStream, SKEncodedImageFormat.Png, 100);
                 newPackage.AddResource(new ResourceKey(0x2F7D0004, 0, largeIMAGKeyInstance), largeIMAGStream, true);
                 newPackage.AddResource(new ResourceKey(0x2F7D0004, 0, smallIMAGKeyInstance), smallIMAGStream, true);
                 nameMapResource.Add(largeIMAGKeyInstance, imageKeyInstanceBase + "_r2");
@@ -194,8 +198,8 @@ namespace Destrospean.MoreFavorites.Generator
                     smallIMAGKeyInstance = FNV64.GetHash(smallIMAGKey);
                 Stream largeIMAGStream = new MemoryStream(),
                     smallIMAGStream = new MemoryStream();
-                largeFoodIMAG.Save(largeIMAGStream, new PngEncoder());
-                smallFoodIMAG.Save(smallIMAGStream, new PngEncoder());
+                largeFoodIMAG.Encode(largeIMAGStream, SKEncodedImageFormat.Png, 100);
+                smallFoodIMAG.Encode(largeIMAGStream, SKEncodedImageFormat.Png, 100);
                 newPackage.AddResource(new ResourceKey(0x2F7D0004, 0, largeIMAGKeyInstance), largeIMAGStream, true);
                 newPackage.AddResource(new ResourceKey(0x2F7D0004, 0, smallIMAGKeyInstance), smallIMAGStream, true);
                 nameMapResource.Add(largeIMAGKeyInstance, largeIMAGKey);
@@ -210,8 +214,8 @@ namespace Destrospean.MoreFavorites.Generator
                     smallIMAGKeyInstance = FNV64.GetHash(smallIMAGKey);
                 Stream largeIMAGStream = new MemoryStream(),
                     smallIMAGStream = new MemoryStream();
-                largeMusicIMAG.Save(largeIMAGStream, new PngEncoder());
-                smallMusicIMAG.Save(smallIMAGStream, new PngEncoder());
+                largeMusicIMAG.Encode(largeIMAGStream, SKEncodedImageFormat.Png, 100);
+                smallMusicIMAG.Encode(largeIMAGStream, SKEncodedImageFormat.Png, 100);
                 newPackage.AddResource(new ResourceKey(0x2F7D0004, 0, largeIMAGKeyInstance), largeIMAGStream, true);
                 newPackage.AddResource(new ResourceKey(0x2F7D0004, 0, smallIMAGKeyInstance), smallIMAGStream, true);
                 nameMapResource.Add(largeIMAGKeyInstance, largeIMAGKey);
